@@ -8,12 +8,14 @@ html
     ul
       each topic in topics
         li
-          a(href='/topics/'+topic)= topic
+          a(href='/topics/'+topic.id)= topic.title
     artcle
       form(action='/topics' method='post')
         p
           input(type='text' name='title' placeholder='title')
         p
           textarea(name='description')
+        p
+          input(type='text' name='author' placeholder='author')
         p
           input(type='submit')
